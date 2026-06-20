@@ -78,7 +78,7 @@ export default function AboutPage() {
           <div className="flex-shrink-0">
             <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-primary/30 p-1">
               <img 
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400&h=400" 
+                src="/founder.png" 
                 alt="Founder Portrait"
                 className="w-full h-full object-cover rounded-full"
               />
