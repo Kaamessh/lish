@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BrainCircuit, AppWindow, Building2 } from "lucide-react";
+import { BrainCircuit, AppWindow, Building2, Server, Layout } from "lucide-react";
 
 export default function ServicesPage() {
   const services = [
@@ -33,6 +33,26 @@ export default function ServicesPage() {
       icon: <Building2 className="w-6 h-6 text-accent" />,
       features: ["HIPAA Compliant Systems", "High-Concurrency Booking", "Load-Balancing Hubs", "Legacy Modernization"],
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800",
+      reversed: false,
+    },
+    {
+      id: "cloud",
+      title: "Cloud Architecture & DevOps",
+      subtitle: "Scalable, auto-healing infrastructure",
+      desc: "We design and deploy robust cloud environments on AWS and Google Cloud. From CI/CD pipelines to containerized microservices, we ensure your infrastructure scales dynamically with traffic.",
+      icon: <Server className="w-6 h-6 text-primary" />,
+      features: ["AWS / GCP", "CI/CD Pipelines", "Docker & Kubernetes", "Zero-Downtime Deploy"],
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800",
+      reversed: true,
+    },
+    {
+      id: "uiux",
+      title: "Premium UI/UX Design",
+      subtitle: "Experiences that convert and delight",
+      desc: "Beautiful aesthetics paired with data-driven user experience flows. We build wireframes, interactive prototypes, and production-ready designs that elevate your brand to the enterprise level.",
+      icon: <Layout className="w-6 h-6 text-secondary" />,
+      features: ["User Research", "Wireframing", "Interactive Prototypes", "Design Systems"],
+      image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=800",
       reversed: false,
     },
   ];

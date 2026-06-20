@@ -164,6 +164,40 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Our Process */}
+      <section className="py-24 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Our Process</h2>
+            <p className="text-lg text-foreground/70">
+              A transparent, engineering-first approach to delivering high-impact solutions.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {[
+              { step: "01", title: "Discovery", desc: "Deep dive into your operational bottlenecks and business goals." },
+              { step: "02", title: "Architecture", desc: "Designing a scalable, secure, and future-proof system blueprint." },
+              { step: "03", title: "Execution", desc: "Rapid, agile development with continuous feedback loops." },
+              { step: "04", title: "Scale", desc: "Deployment, monitoring, and iterative enhancements." }
+            ].map((item, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.15 }}
+                className="relative flex flex-col p-6 rounded-2xl bg-card border border-white/5 hover:border-primary/30 transition-all group"
+              >
+                <span className="text-5xl font-black text-white/5 absolute top-4 right-4 group-hover:text-primary/10 transition-colors">{item.step}</span>
+                <h3 className="text-xl font-bold mb-3 mt-8">{item.title}</h3>
+                <p className="text-foreground/70 text-sm leading-relaxed">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Lead Magnet CTA */}
       <section className="py-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-primary/5 -z-10" />

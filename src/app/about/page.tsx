@@ -52,9 +52,9 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.2 }}
-                className="flex flex-col gap-4"
+                className="flex flex-col gap-4 p-6 rounded-2xl border border-transparent hover:bg-card/50 hover:border-card-border transition-all group"
               >
-                <div className="w-14 h-14 rounded-2xl bg-background border border-white/10 flex items-center justify-center">
+                <div className="w-14 h-14 rounded-2xl bg-background border border-white/10 flex items-center justify-center group-hover:scale-110 transition-transform">
                   {item.icon}
                 </div>
                 <h3 className="text-2xl font-bold">{item.title}</h3>
@@ -69,15 +69,18 @@ export default function AboutPage() {
       <section className="pt-32 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl md:text-5xl font-bold mb-16">Leadership</h2>
         
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          className="bg-card border border-card-border rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-10 text-left"
-        >
-          <div className="flex-shrink-0">
-            <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-primary/30 p-1">
-              <img 
+        <div className="relative">
+          <div className="absolute inset-0 bg-primary/10 rounded-3xl blur-[80px] -z-10" />
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="bg-card border border-card-border rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-10 text-left relative overflow-hidden"
+          >
+            <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-[64px]" />
+            <div className="flex-shrink-0 z-10">
+              <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-primary/30 p-1 group-hover:border-primary/60 transition-colors">
+                <img 
                 src="/founder.png" 
                 alt="Founder Portrait"
                 className="w-full h-full object-cover rounded-full"
@@ -95,7 +98,8 @@ export default function AboutPage() {
               Holding a strong foundation in Data Science and Machine Learning, he leads our engineering teams to deliver robust, intelligent solutions that fundamentally transform how our clients operate.
             </p>
           </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </section>
     </div>
   );
