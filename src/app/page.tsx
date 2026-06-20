@@ -63,26 +63,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Social Proof Marquee */}
-      <section className="py-10 border-y border-white/10 bg-black/50 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
-          <p className="text-center text-sm font-medium text-foreground/50 uppercase tracking-widest">
-            Trusted by modern enterprises
-          </p>
-        </div>
-        <div className="flex space-x-12 animate-[marquee_20s_linear_infinite] whitespace-nowrap opacity-50 hover:opacity-100 transition-opacity">
-          {/* We duplicate the content to make the infinite scroll seamless */}
-          {[...Array(2)].map((_, i) => (
-            <div key={i} className="flex space-x-12 min-w-max items-center">
-              <img src="https://via.placeholder.com/150x50/111827/ffffff?text=Enterprise+Corp" alt="Logo" className="h-8 object-contain" />
-              <img src="https://via.placeholder.com/150x50/111827/ffffff?text=HealthTech+Inc" alt="Logo" className="h-8 object-contain" />
-              <img src="https://via.placeholder.com/150x50/111827/ffffff?text=Retail+Giant" alt="Logo" className="h-8 object-contain" />
-              <img src="https://via.placeholder.com/150x50/111827/ffffff?text=Data+Systems" alt="Logo" className="h-8 object-contain" />
-              <img src="https://via.placeholder.com/150x50/111827/ffffff?text=AI+Innovators" alt="Logo" className="h-8 object-contain" />
-            </div>
-          ))}
-        </div>
-      </section>
+
 
       {/* Value Proposition */}
       <section className="py-24 relative">
