@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div className="md:col-span-1">
             <Link href="/" className="text-2xl font-bold tracking-tighter flex items-center gap-2 mb-4">
-              <img src="/logo.svg" alt="LISH Logo" className="w-8 h-8 rounded-lg" />
+              <img src="/logo.png" alt="LISH Logo" className="w-8 h-8 rounded-lg" />
               LISH
             </Link>
             <p className="text-foreground/60 text-sm mb-6">
