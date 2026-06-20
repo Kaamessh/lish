@@ -39,7 +39,7 @@ export default function Navbar() {
               <div className="w-8 h-8 rounded bg-primary flex items-center justify-center">
                 <span className="text-background font-black leading-none">A</span>
               </div>
-              Aura
+              LISH
             </Link>
           </div>
 

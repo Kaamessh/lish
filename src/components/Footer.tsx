@@ -10,7 +10,7 @@ export default function Footer() {
               <div className="w-8 h-8 rounded bg-primary flex items-center justify-center">
                 <span className="text-background font-black leading-none">A</span>
               </div>
-              Aura
+              LISH
             </Link>
             <p className="text-foreground/60 text-sm mb-6">
               Elite custom software development and AI agency for modern enterprises. We build the future.
@@ -48,7 +48,7 @@ export default function Footer() {
         
         <div className="border-t border-card-border pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-foreground/40 text-sm">
-            &copy; {new Date().getFullYear()} Aura Agency. All rights reserved.
+            &copy; {new Date().getFullYear()} LISH Agency. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             {/* Keeping it clean without legal/privacy pages as requested */}

@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Aura | Custom Software & AI Agency",
+  title: "LISH | Custom Software & AI Agency",
   description: "Elite custom software development and AI agency for modern enterprises.",
 };
 
