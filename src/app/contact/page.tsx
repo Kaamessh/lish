@@ -13,11 +13,31 @@ export default function ContactPage() {
     description: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate form submission
-    console.log("Form submitted:", formState);
-    alert("Thank you for reaching out! We will get back to you shortly.");
+    setIsSubmitting(true);
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/lishorganization@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(formState)
+      });
+      if (response.ok) {
+        setFormState({ name: "", company: "", email: "", projectType: "", description: "" });
+        alert("Thank you! Your message has been sent successfully.");
+      } else {
+        alert("There was an error sending your message. Please try again.");
+      }
+    } catch (error) {
+      alert("There was an error sending your message. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -71,7 +91,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-sm text-foreground/50 font-medium">Email</p>
-                    <p className="text-lg font-medium">hello@lish-agency.com</p>
+                    <p className="text-lg font-medium">lishorganization@gmail.com</p>
                   </div>
                 </div>
                 
@@ -81,7 +101,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-sm text-foreground/50 font-medium">Phone</p>
-                    <p className="text-lg font-medium">+1 (555) 123-4567</p>
+                    <p className="text-lg font-medium">6379961830</p>
                   </div>
                 </div>
                 
@@ -91,7 +111,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-sm text-foreground/50 font-medium">Office</p>
-                    <p className="text-lg font-medium">100 Tech Hub Blvd, San Francisco, CA</p>
+                    <p className="text-lg font-medium">Chennai, 603203</p>
                   </div>
                 </div>
               </div>
@@ -194,9 +214,10 @@ export default function ContactPage() {
 
               <button 
                 type="submit"
-                className="w-full py-4 rounded-xl bg-primary text-black font-bold text-lg hover:bg-primary-hover transition-colors flex items-center justify-center gap-2 group"
+                className={`w-full py-4 rounded-xl bg-primary text-black font-bold text-lg hover:bg-primary-hover transition-colors flex items-center justify-center gap-2 group ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
+                disabled={isSubmitting}
               >
-                Send Message
+                {isSubmitting ? "Sending..." : "Send Message"}
                 <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
               </button>
             </form>
