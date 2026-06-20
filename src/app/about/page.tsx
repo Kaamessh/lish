@@ -92,10 +92,10 @@ export default function AboutPage() {
             <h3 className="text-3xl font-bold mb-2">Kaamesh</h3>
             <p className="text-primary font-medium mb-6 uppercase tracking-wider text-sm">Founder & Chief Architect</p>
             <p className="text-foreground/80 leading-relaxed mb-6">
-              With over a decade of experience in building high-frequency trading systems and enterprise data platforms, Kaamesh founded LISH with a singular vision: to bridge the gap between complex AI research and practical, scalable business applications.
+              Driven by a powerful mission and deep knowledge of modern software architecture, Kaamesh founded LISH as a student with a singular vision: to integrate cutting-edge AI and development tools to solve complex real-world problems.
             </p>
             <p className="text-foreground/80 leading-relaxed">
-              Holding a strong foundation in Data Science and Machine Learning, he leads our engineering teams to deliver robust, intelligent solutions that fundamentally transform how our clients operate.
+              Continuously inventing and exploring new technologies, he leads our initiatives to deliver intelligent, robust solutions that fundamentally transform how modern businesses operate.
             </p>
           </div>
           </motion.div>
