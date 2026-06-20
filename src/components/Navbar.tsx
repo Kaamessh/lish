@@ -36,9 +36,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="text-2xl font-bold tracking-tighter flex items-center gap-2">
-              <div className="w-8 h-8 rounded bg-primary flex items-center justify-center">
-                <span className="text-background font-black leading-none">A</span>
-              </div>
+              <img src="/logo.svg" alt="LISH Logo" className="w-8 h-8 rounded-lg" />
               LISH
             </Link>
           </div>
