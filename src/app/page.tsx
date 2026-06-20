@@ -35,7 +35,7 @@ export default function Home() {
                   href="/contact"
                   className="px-8 py-4 rounded-full bg-primary text-black font-semibold hover:bg-primary-hover hover:shadow-[0_0_20px_rgba(0,240,255,0.4)] transition-all flex items-center gap-2"
                 >
-                  Start Your Project
+                  Discuss Your Vision
                   <ArrowRight size={20} />
                 </Link>
                 <Link
