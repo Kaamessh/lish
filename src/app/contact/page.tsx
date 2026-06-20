@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Globe, Code2, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Instagram, Send } from "lucide-react";
 import { useState } from "react";
 
 export default function ContactPage() {
@@ -120,11 +120,11 @@ export default function ContactPage() {
             <div>
               <h4 className="text-lg font-bold mb-4">Connect With Us</h4>
               <div className="flex gap-4">
-                <a href="#" className="w-12 h-12 rounded-full bg-card border border-card-border flex items-center justify-center text-foreground hover:text-primary hover:border-primary transition-colors">
-                  <Globe size={20} />
+                <a href="https://www.linkedin.com/company/132504096/admin/dashboard/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-card border border-card-border flex items-center justify-center text-foreground hover:text-primary hover:border-primary transition-colors">
+                  <Linkedin size={20} />
                 </a>
-                <a href="#" className="w-12 h-12 rounded-full bg-card border border-card-border flex items-center justify-center text-foreground hover:text-primary hover:border-primary transition-colors">
-                  <Code2 size={20} />
+                <a href="https://www.instagram.com/lish_org?igsh=OHNtcWJiOWk2OGFt" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-card border border-card-border flex items-center justify-center text-foreground hover:text-primary hover:border-primary transition-colors">
+                  <Instagram size={20} />
                 </a>
               </div>
             </div>
