@@ -165,7 +165,7 @@ export default function ContactPage() {
                     value={formState.name}
                     onChange={handleChange}
                     className="w-full bg-background border border-white/10 rounded-xl px-4 py-3 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
-                    placeholder="John Doe"
+                    placeholder="Enter your name"
                   />
                 </div>
                 <div className="space-y-2">
@@ -177,7 +177,7 @@ export default function ContactPage() {
                     value={formState.company}
                     onChange={handleChange}
                     className="w-full bg-background border border-white/10 rounded-xl px-4 py-3 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
-                    placeholder="Enterprise Corp"
+                    placeholder="Enter your company name"
                   />
                 </div>
               </div>
@@ -192,7 +192,7 @@ export default function ContactPage() {
                   value={formState.email}
                   onChange={handleChange}
                   className="w-full bg-background border border-white/10 rounded-xl px-4 py-3 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
-                  placeholder="john@example.com"
+                  placeholder="Enter your mail id"
                 />
               </div>
 
